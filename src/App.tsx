@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import './vanilla-char-count';
 import './fast-char-count';
+import './lit-char-count';
 
 function App() {
   const elementProps = {
@@ -20,6 +20,10 @@ function App() {
 
       <h2>FASTElement</h2>
       <fast-char-count {...elementProps}></fast-char-count>
+
+      <h2>LitElement</h2>
+      <lit-char-count {...elementProps}></lit-char-count>
+
     </div>
   );
 }
