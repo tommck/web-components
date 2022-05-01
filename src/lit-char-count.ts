@@ -28,7 +28,7 @@ export class LitCharCount extends LitElement {
   charInput = createRef<HTMLInputElement>();
 
   @property()
-  charsText = "";
+  private charsText = "";
 
   render() {
     return html`
@@ -51,6 +51,6 @@ export class LitCharCount extends LitElement {
 
   keyUpHandler(e: Event) {
     const input = (e.target as HTMLInputElement);
-    this.charsText = `(${input.value?.length || 0} chars)`;
+    this.charsText = `(${input.value?.length ?? 0} chars)`;
   }
 }
